@@ -1,0 +1,314 @@
+@model WebGomeet.Models.LoginModels
+
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Bienvenido";
+    ViewData["MetaDescription"] = "";
+}
+
+<header id="inicio" class="parallax-window" data-parallax="scroll" data-image-src="/images/back-1.jpg">
+	<!--<video preload="auto" loop="loop" id="pretzel-video" class="video-playing" 
+			autoplay="autoplay" width="100%" >
+		<source src="/images/back-video.mp4" type="video/mp4">
+		<source src="/images/back-video.webm" type="video/webm">
+	</video>-->
+		
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1 class="wow zoomIn animated">Aprende y descubre con personas de tu localidad</h1>
+            <h2>Aquí podrás encontrar cursos, talleres y tutorias realizadas por personas de tu localidad con ganas de enseñar sus habilidades.</h2>
+            @if(ViewBag.Accion == "Login" && 1 == 0)
+            {	            
+				@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+				{
+		            <div class="row">
+		            	<div class="col-md-6 col-md-offset-3">
+						  <div class="form-group">
+						    <label class="sr-only" for="email">Email</label>
+						    @Html.TextBox("Email", null, new {@class ="form-control input-lg", @placeholder = "Introduce tu email"})
+							<span asp-validation-for="Email" class="text-danger" />
+						  </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+						  <div class="form-group">
+						    <label class="sr-only" for="password">Contraseña</label>
+						    @Html.Password("Clave", null, new {@class ="form-control input-lg", @placeholder = "Contraseña"})
+							<span asp-validation-for="Clave" class="text-danger" />
+						  </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+							<div class="form-group">
+								<button type="submit" class="btn btn-default full">Ingresar</button>				
+							</div>
+					    </div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+							<div class="form-group">
+								<a href="#" class="link link-default">¿Olvidaste tu contraseña?</a>
+						    </div>
+					    </div>
+					</div>
+				}	
+			}
+			else if(1 == 0)
+			{
+				@using (Html.BeginForm("Registro", "Home", FormMethod.Post))
+				{				
+					<div class="row">
+		            	<div class="col-md-6 col-md-offset-3">
+						  <div class="form-group">
+						    <label class="sr-only" for="nombre">Nombre</label>						    
+							@Html.TextBox("Nombre", null, new {@class ="form-control input-lg", @placeholder = "Ingresa tu nombre"})
+						  </div>
+						</div>
+					</div>
+		            <div class="row">
+		            	<div class="col-md-6 col-md-offset-3">
+						  <div class="form-group">
+						    <label class="sr-only" for="email">Email</label>						    
+							@Html.TextBox("Email", null, new {@class ="form-control input-lg", @placeholder = "Introduce tu email"})
+						  </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+						  <div class="form-group">
+						    <label class="sr-only" for="password">Contraseña</label>						    
+							@Html.Password("Clave", null, new {@class ="form-control input-lg", @placeholder = "Contraseña"})
+						  </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+                            <div class="form-group">
+							    <button type="submit" class="btn btn-default full">Continuar</button>
+                            </div>
+					    </div>
+					</div>					
+				}		
+			}
+			else {
+				
+			}
+            <a href="#tematicas" class="btn-mouse page-scroll">				
+                <img src="~/images/mouse-flechas.png" class="mouse bounce animated infinito" alt="¿Cómo funciona?" />				
+            </a>
+			
+        </div>
+
+			
+    </div>
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 content-bottom">
+				<form class="form-horizontal" role="form">
+					
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1">
+									<div class="form-group">
+										<label for="busqueda" class="sr-only">¿Qué estas buscando?</label>
+										<input type="text" class="form-control level1" id="busqueda" placeholder="¿Qué estas buscando?">
+										<input type="text" class="form-control level2" id="ciudad" value="Santiago, Chile" readonly="readonly">
+										<span class="pointmap glyphicon glyphicon-map-marker pad12"></span>
+ 										<button type="submit" class="btn btn-green form-control level3">
+											<span class="glyphicon glyphicon-search pad12"></span>
+											&nbsp;Buscar</button>
+									</div>
+								</div>
+								
+							</div>
+						</div>						
+					
+					<!--
+					<div class="col-md-offset-2 col-md-8">
+						<div class="col-md-10">
+							<label for="destino" class="sr-only">Colegio</label>
+							<input type="text" class="form-control level1" id="destino" placeholder="Ingresa un nombre, comuna o ciudad">
+						</div>
+						<div class="col-md-2">
+							<button type="submit" class="btn btn-green">
+								<span class="glyphicon glyphicon-search pad12"></span>
+								&nbsp;Buscar</button>
+						</div>
+					</div>
+					-->
+				</form>
+			</div>
+		</div>		
+	
+	</div>
+
+</header>
+
+<section class="bg-none bg-default" id="banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="banner-home">
+					<div class="cont-image">
+						<img src="/images/banner/tutoria.jpg" width="100%">
+					</div>
+					<div class="cont-txt bg-white">
+						<h2>Conviertete en maestro</h2>
+						<p>
+							Comparte tus conocimientos y habilidades con las personas de tu localidad.
+							Gana un dinero extra en los horarios y tiempos que tu estimes.
+						</p>
+						<a class="btn btn-menu">Registrate ahora</a>
+					</div>
+				</div>
+            </div>						
+		</div>
+	</div>
+</section>
+
+<section class="bg-primary bg-default" id="tematicas">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<div class="content-rel">
+					<div class="content-abs-titulo">
+                		<h2 class="section-heading como-funciona wow bounceInDown">Tematicas Principales</h2>
+					</div>
+				</div>
+            </div>			
+		</div>
+		<div class="row">
+			<div class="col-md-4 text-center">
+				<div class="item-tematica">
+					<h3>Gastronomia</h3>
+					<a href="#">
+					<img src="~/images/tematicas/gastronomia.jpg" />
+					</a>
+				</div>
+			</div>
+			<div class="col-md-4 text-center">
+				<div class="item-tematica">
+					<h3>Artes</h3>
+					<a href="#">
+					<img src="~/images/tematicas/artes.jpg" />
+					</a>
+				</div>
+			</div>
+			<div class="col-md-4 text-center">
+				<div class="item-tematica">
+					<h3>Deportes Extremos</h3>
+					<a href="#">
+					<img src="~/images/tematicas/deportes-extremos.jpg" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 text-center">
+				<div class="item-tematica">
+					<h3>Musica</h3>
+					<a href="#">
+					<img src="~/images/tematicas/musica.jpg" />
+					</a>
+				</div>
+			</div>
+			<div class="col-md-4 text-center">
+				<div class="item-tematica">
+					<h3>Informática</h3>
+					<a href="#">
+					<img src="~/images/tematicas/programacion.jpg" />
+					</a>
+				</div>
+			</div>
+			<div class="col-md-4 text-center">
+				<div class="item-tematica">
+					<h3>Yoga</h3>
+					<a href="#">
+					<img src="~/images/tematicas/yoga.jpg" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="row sectionhide">
+			<div class="col-md-4 text-center">
+				<div class="item-tematica">
+					<h3>Emprendimiento y Liderazgo</h3>
+					<a href="#">
+					<img src="~/images/tematicas/emprendimiento.jpg" />
+					</a>
+				</div>
+			</div>
+			<div class="col-md-4 text-center">
+				<div class="item-tematica">
+					<h3>Educación Escolar</h3>
+					<a href="#">
+					<img src="~/images/tematicas/educacion-escolar.JPG" />
+					</a>
+				</div>
+			</div>
+			<div class="col-md-4 text-center">
+				<div class="item-tematica">
+					<h3>Adistramiento Canino</h3>
+					<a href="#">
+					<img src="~/images/tematicas/adiestramiento-canino.jpg" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4 text-center">
+				<a type="submit" class="btn btn-green btn-mas-tematicas">
+										<span class="glyphicon glyphicon-chevron-down pad12"></span>
+										&nbsp;Ver más tematicas</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="bg-primary bg-default" id="comofunciona">
+    <div class="container">
+        <div class="row">
+			
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+				<div class="content-rel">
+					<div class="content-abs-titulo">
+                		<h2 class="section-heading como-funciona wow bounceInDown">¿Cómo funciona GoMeet?</h2>
+					</div>
+				</div>                               
+            </div>
+			
+			<div class="col-lg-3 text-center">				
+				<div class="icon-accion">
+					<div class="icon-dest glyphicon glyphicon-search wow fadeInUp"></div>										
+				</div>
+				<h3 class="section-sub wow fadeInUp">Busca</h3>
+				<p class="wow fadeInUp">
+				Encuentra desde tu posición geográfica cursos, talleres y tutores de un sin fin de temas.<br> 
+				Lo que quieras hacer esta al alcance de tus manos.
+				</p>	
+			</div>
+			<div class="col-lg-4 col-lg-offset-1 text-center">
+				<div class="icon-accion">
+					<div class="icon-dest lila glyphicon glyphicon-stats wow fadeInUp"></div>										
+				</div>
+				<h3 class="section-sub wow fadeInUp">Compara cualidades y características</h3>
+				<p class="wow fadeInUp">
+				Compara las catacterísticas como: metodologias de enseñansa, ubicación, 
+				valor de mensualidad, disponibilidad de horarios, etc...
+				</p>
+			</div>  
+			<div class="col-lg-3 col-lg-offset-1 text-center">
+				<div class="icon-accion">
+					<div class="icon-dest nar glyphicon glyphicon-heart-empty wow fadeInUp"></div>										
+				</div>
+				<h3 class="section-sub wow fadeInUp">Disfruta<br></h3>
+				<p class="wow fadeInUp">
+				Eso es todo! contrata los servicios que más te acomoden y comienza a disfrutar.
+				</p>
+			</div>
+			
+        </div>
+    </div>
+                        
+</section>

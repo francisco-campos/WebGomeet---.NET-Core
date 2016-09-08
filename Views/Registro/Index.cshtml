@@ -1,0 +1,192 @@
+@model WebGomeet.Models.LoginModels
+
+@{
+	Layout = "~/Views/Shared/_Layout.registro.cshtml";
+    ViewData["Title"] = "Registrate";
+    ViewData["MetaDescription"] = "";
+}
+
+<header id="inicio" class="parallax-window registro" data-parallax="scroll" data-image-src="/images/back-registro1.jpg">
+	<!--<video preload="auto" loop="loop" id="pretzel-video" class="video-playing" 
+			autoplay="autoplay" width="100%" >
+		<source src="/images/back-video.mp4" type="video/mp4">
+		<source src="/images/back-video.webm" type="video/webm">
+	</video>-->
+		
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1 class="wow zoomIn animated">Gana dinero extra enseñando tus habilidades</h1>
+            <h2>Enseña tus habilidades a las personas de tu localidad, puedes ser un 
+                tutor a domicilio, crear clases grupales, fijar tus propios horarios y muchas cosas más.</h2>
+            
+			<!--<div class="g-signin2" data-width="300" data-height="200" data-longtitle="true">-->
+				<!--<div id="customBtn" class="customGPlusSignIn">
+      <span class="icon"></span>
+      <span class="buttonText">Registrarme con Google</span>
+    </div>-->
+
+            <a href="#" class="btn btn-social btn-facebook">
+                <span class="fa fa-facebook"></span> Registrarme con Facebook
+            </a>
+            <a href="#" id="customBtn" class="btn btn-social btn-google">
+                <span class="fa fa-google"></span> Registrarme con Google
+            </a>
+            <a href="#" class="btn btn-social btn-reddit">
+                <span class="fa glyphicon glyphicon-envelope"></span> Registrarme con un Email
+            </a>
+			
+        </div>
+
+			
+    </div>
+    
+</header>
+
+<section class="bg-primary bg-default" id="tematicas">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<div class="content-rel">
+					<div class="content-abs-titulo">
+                		<h2 class="section-heading como-funciona wow bounceInDown">Cómo ser maestro</h2>
+					</div>
+				</div>
+            </div>			
+		</div>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="banner-step">
+					<div class="cont-txt bg-white">
+						<img src="/images/ico1.png" class="ico-number">
+						<h2>Registrate</h2>
+						<p>
+							Lo primero que debes hacer es crear un anuncio.<br>
+							Podrás entregar tus servicios de diferentes formas, por ejemplo como un tutor
+							que entrega servicios a domicilio u organizando tus clases en un 
+							lugar y horario previamente establecido. 
+						</p>
+						<div class="row">
+							<div class="col-md-4">
+								<span class="ico naranjo glyphicon glyphicon-bullhorn"></span>
+								<h3>¿Cómo creo un anuncio?</h3>
+								<p>Deberás ingresar un título y descripción de lo que ofreces, estableciendo
+									un calendario con tus horarios disponibles o los días que impartes las clases.
+									Además puedes subir fotos para llamar más la atención de los usuarios.
+								</p>
+							</div>
+							<div class="col-md-4">
+								<span class="ico verde glyphicon glyphicon-calendar"></span>
+								<h3>¿Cómo saber si han reservado?</h3>
+								<p>Cuando un usuario contrate tus servicios de inmediato se te notificara
+									y se enviaran los datos del usuario.
+									Además puedes acceder a tu cuenta y ver un reporte completo. 
+								</p>
+							</div>
+							<div class="col-md-4">
+								<span class="ico lila glyphicon glyphicon-retweet"></span>
+								<h3>¿Los usuarios se comunican con migo?</h3>
+								<p>En todo momento los usuarios te podrán enviar consultas y además
+									calificar tus servicios una vez contratado, esto para que puedas ir ganando 
+									reputación y consigas mas clientes.
+								</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+
+				<div class="banner-step">
+					<div class="cont-txt bg-white">
+						<img src="/images/ico2.png" class="ico-number">
+						<h2>Los usuarios buscan anuncios y te contactarán</h2>
+						<p>
+							Recibiras una confirmación cuando contraten tus servicios.<br>
+							Además te podrán escribir mensajes publicos y calificar tus servicios.
+						</p>
+						<div class="row">
+							<div class="col-md-6">
+								<span class="ico naranjo glyphicon glyphicon-certificate"></span>
+								<h3>Confirma con el cliente</h3>
+								<p>Una vez que contraten tu servicio es ideal que puedas confirmar al usuario 
+									lo que ha contratado, de 
+									esta forma se sentira más seguro y entregaras un mejor servicio.
+									<br>
+									Para esto te podrás contarctar por medio de la app o simplemente llamarlo.
+								</p>
+							</div>
+							<div class="col-md-6">
+								<span class="ico verde glyphicon glyphicon-share-alt"></span>
+								<h3>¿Puedo mover una fecha ya acordada?</h3>
+								<p>Si tienes algún problema para cumplir con tu clase puedes
+									modificar la fecha por medio del calendario y automaticamente se enviara 
+									una notificación a los usuarios asociados.<br>
+									Ten encuenta que el usuario podrá cancelar el servicio. 
+								</p>
+							</div>
+							
+						</div>
+						
+					</div>
+				</div>
+
+
+				<div class="banner-step">
+					<div class="cont-txt bg-white">
+						<img src="/images/ico3.png" class="ico-number">
+						<h2>Realiza tu clase!</h2>
+						<p>
+							
+						</p>
+						<div class="row">
+							<div class="col-md-4">
+								<span class="ico naranjo glyphicon glyphicon-credit-card"></span>
+								<h3>¿Cómo pagan los usuarios?</h3>
+								<p>Nosotros nos encargamos de cobrar a los usuarios cuando contratan tus servicios.
+									De esta forma no tendrás que preocuparte de gestionar los pagos.
+								</p>
+							</div>
+							<div class="col-md-4">
+								<span class="ico verde glyphicon glyphicon-download-alt"></span>
+								<h3>¿Cómo recibo mi dinero?</h3>
+								<p>
+									Tienes varias opciones para recibir tus pagos, 
+									como a través de PayPal o mediante una transferencia bancaria. 
+									Te los enviaremos automáticamente 24 horas después de realizada la clase. 
+								</p>
+							</div>
+							<div class="col-md-4">
+								<span class="ico lila glyphicon glyphicon-usd"></span>
+								<h3>Costos asociados</h3>
+								<p>
+									Crear anuncios es gratuito.
+									<br>
+									Cobramos una tarifa del 5% una vez contrada una clase.									 
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Ahora ya sabes como todo funciona.</h3>
+								<br>
+								<a href="#" class="btn btn-social btn-facebook">
+									<span class="fa fa-facebook"></span> Registrarme con Facebook
+								</a>
+								<a href="#" class="btn btn-social btn-google">
+									<span class="fa fa-google"></span> Registrarme con Google
+								</a>
+								<a href="#" class="btn btn-social btn-reddit">
+									<span class="fa glyphicon glyphicon-envelope"></span> Registrarme con un Email
+								</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+            </div>
+			
+		</div>
+		
+	</div>
+</section>

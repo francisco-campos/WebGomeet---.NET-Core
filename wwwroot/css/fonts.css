@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Museo sans';
+  src: url('../Fonts/MuseoSans_500.otf');  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Museo sans bold';
+  src: url('../Fonts/MuseoSans_900.otf');  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open sans light';
+  src: url('../Fonts/OpenSans-Light.ttf');  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open sans regular';
+  src: url('../Fonts/OpenSans-Regular.ttf');  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima nova bold';
+  src: url('../Fonts/ProximaNova-Bold.otf');  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima nova light';
+  src: url('../Fonts/ProximaNova-Light.otf');  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima nova';
+  src: url('../Fonts/ProximaNova-Reg.otf');  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Yellowtail';
+  src: url('../Fonts/Yellowtail-Regular.otf');  
+  font-weight: normal;
+  font-style: normal;
+}

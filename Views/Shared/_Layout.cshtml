@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="@ViewData["MetaDescription"]">
+    <meta name="author" content="GoMeet">
+    <meta name="google-site-verification" content="" />
+    
+    <title>@ViewData["Title"] | GoMeet</title>
+
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" type="text/css" />
+        <link rel="stylesheet" href="~/lib/animate.css-master/animate.min.css" type="text/css" />
+        <link rel="stylesheet" href="~/lib/fancyBox-master/source/jquery.fancybox.css?v=2.1.5" type="text/css" />
+        <link rel="stylesheet" href="~/lib/bootstrap-social/bootstrap-social.css" asp-append-version="true" />
+
+        <link rel="stylesheet" href="~/css/fonts.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/creative.css" asp-append-version="true" />      
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+</head>
+<body id="page-top" class="fadeIn animated ini_seg1"> 
+    
+    <nav id="mainNav" class="navbar navbar-go navbar-fixed-top" role="navigation">
+        
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Desplegar navegación</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a asp-controller="Home" asp-action="Index" class="navbar-brand page-scroll fadeInDownBig animated" title="GoMeet">
+                    <img src="~/Images/logo-gomeet.png" class="logo pulse animated" alt="GoMeet" />
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+    
+            	<div class="container-fluid">
+	                <ul class="nav navbar-nav navbar-left">
+                        <li><a asp-controller="Registro" asp-action="Index" class="btn btn-menu">Comparte tus habilidades</a> </li>
+	                </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="#inicio">Inicio</a></li>                                                
+                        <li><a class="page-scroll" href="#tematicas">Tematicas</a></li>
+                        <li><a class="page-scroll" href="#comofunciona">Cómo Funciona</a></li>                                                                        
+                        <li>
+                        @if(ViewBag.Accion != "Login")
+                        {
+                            <a asp-controller="Registro" asp-action="Usuario" class="btn btn-primary">REGISTRATE</a>
+                        }
+                        else 
+                        {
+                            <a class="btn btn-primary">Inicia sesión</a>
+                        }
+                        </li>                        
+                    </ul>
+
+	    		</div>
+        		<!-- /.container-fluid -->
+
+            </div>
+
+            <!-- /.navbar-collapse -->
+        
+    </nav>
+
+    @RenderBody()
+    
+    <footer class="clasic">
+        
+        <div class="enlaces">
+            <ul>
+                <li><a href="/planes" title="Planes">Planes</a></li><li><a href="/politica-privacidad" title="Política de Privacidad">Política de Privacidad</a></li><li><a href="/politica-cookies" title="Política de cookies">Política de cookies</a></li><li><a href="/terminos-de-uso" title="Términos de Uso">Términos de Uso</a></li><li><a href="/mapa-del-sitio" title="Mapa del Sitio">Mapa del Sitio</a></li><li><a href="/contacto" title="Contáctanos">Contáctanos</a></li><li><a href="/sobre-nosotros" title="Sobre Nosotros">Sobre Nosotros</a></li>        
+            </ul>
+        </div>                
+        <div class="redesSociales">
+            <a href="https://www.facebook.com/schoolmars" rel="nofollow" title="facebook" target="_blank">
+                <img src="/images/icoFac.png" alt="facebook" title="facebook"></a>
+            <a href="https://twitter.com/schoolmars_com" rel="nofollow" title="twitter" target="_blank">
+                <img src="/images/icoTwi.png" alt="twitter" title="twitter"></a>
+            <a href="https://www.linkedin.com/company/schoolmars" rel="nofollow" title="linkedin" target="_blank">
+                <img src="/images/icoLin.png" alt="linkedin" title="linkedin"></a>
+            <a href="https://plus.google.com/+Schoolmars" rel="nofollow" title="google +" target="_blank">
+                <img src="/images/icoGoo.png" alt="google +" title="google +"></a>
+        </div>
+        <div class="copyright">2016 GoMeet. Todos los derechos reservados</div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="~/js/jquery.js"></script>
+    
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="~/js/jquery.easing.min.js"></script>
+    <script src="~/js/jquery.fittext.js"></script>
+    <script src="~/js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="~/js/creative.js"></script>
+    
+    <!-- Lightbox -->
+    <script type="text/javascript" src="~/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+    
+    <!-- Parallax -->
+   <script src="~/js/parallax.js-master/parallax.min.js"></script>
+   
+    <!-- Funciones internas -->
+    <script src="~/js/funciones.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
